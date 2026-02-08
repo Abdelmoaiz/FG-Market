@@ -1,0 +1,21 @@
+{
+  "name": "hilarious-tail-locate-0xo2o",
+  "productName": "hilarious-tail-locate-0xo2o",
+  "description": "My Electron application description",
+  "keywords": [],
+  "main": "./main.js",
+  "version": "1.0.0",
+  "author": "Yassin",
+  "scripts": {
+    "start": "electron ."
+  },
+  "dependencies": {
+    "barcode": "^0.1.0",
+    "jsbarcode": "^3.11.6",
+    "qrcode": "^1.5.3"
+  },
+  "devDependencies": {
+    "electron": "20.1.4",
+    "nedb": "^1.8.0"
+  }
+}

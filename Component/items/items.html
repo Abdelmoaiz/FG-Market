@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المشتريات والمخازن</title>
+    <link rel="stylesheet" href="css/purchases.css">
+</head>
+<body dir="rtl">
+    <header>
+        <a class="casher" href="../home/home.html">الرئيسية</a>
+        <h1>الاصناف</h1>
+        <a class="sales" href="../../index.html">خروج</a>
+    </header>
+    <div class="alarm1 alarm">
+        <h3 style="color: #fff; margin: 10px;">هل تريد الحذف</h3>
+        <div class="buttons">
+            <button id="btnCheckEdite" onclick="checkPass();">موافق</button>
+            <button id="btnCancel" onclick="refresh();">الغاء</button>
+        </div>
+    </div>
+    <div class="alarm2 alarm">
+        <h3 style="color: #fff; margin: 10px;">هذا الباركود مسجل من قبل هل تريد الاستمرار</h3>
+        <div class="buttons">
+            <button id="btnCheckEdite" onclick="checkBarcode();">موافق</button>
+            <button id="btnCancel" onclick="cancel();">الغاء</button>
+        </div>
+    </div>
+    <div class="cruds">
+        <div class="buttons">
+            <button class="btnOpenInputs" onclick="openInputs1();">اضافة صنف </button>
+            <input type="text" name="" id="search" placeholder="بحث" onkeyup="searchItems(this.value)">
+            <button class="btnOpenInputs" onclick="refresh();" >تحديث</button>
+        </div>
+        <div class="inputs1">
+            <form>
+                <div class="allInputs">
+                    
+                    <div class="info">
+                        <div>
+                            <label for="title">اسم الصنف</label>
+                            <input type="text" value="" id="title" onkeyup="getIdItems();"  placeholder="اسم صنف" required>
+        
+                        </div>
+                        <div>
+                            <label for="typeItems">الباركود</label>
+                            <select id="typeItems" >
+                                <option value="فاكهه">فاكهه</option>
+                                <option value="خضار">خضار</option>
+                            </select>
+                        </div>
+                        
+                    </div>
+                    
+                    
+                   
+    
+                </div>
+                
+                <button id="create">اضافة صنف</button>
+                <button class="btnOpenInputs" onclick="refresh();">الغاء</button>
+            </form>
+            
+
+        </div>
+        
+        <div class="divDeletAll">
+
+        </div>
+        <table border="1">
+            <tr>
+                <th colspan="12" class="headTable">كل الاصناف</th>
+            </tr>
+            <tr>
+                <th>م</th>
+                <th>التاريخ</th>
+                <th>اسم الصنف</th>
+                <th>النوع</th>
+                <th>تحديث</th>
+                <th>حذف</th>
+            </tr>
+            <tbody class="tbody">
+                
+                
+            </tbody>
+        </table>
+    </div>
+    <script src="js/items.js"></script>
+</body>
+</html>

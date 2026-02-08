@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الحسابات</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body dir="rtl">
+    <div class="app">
+        <header>
+            <a class="home" href="../home/home.html"><img src="../../img/huanfang.ico" alt="home"></a>
+            <span class="userName"></span>
+            <h1>عملاء</h1>
+            <span class="dateAndTime"></span>
+            <a class="exit" href="../../index.html"><img src="../../img/cancel.ico" alt="exit"></a>
+        </header>
+        <aside>
+            <button id="" onclick="addSuplaierNew();">اضافة عميل جديد</button>
+            <button type="button" class="viewSearchSuppliers">بحث</button>
+            <button type="button" onclick="printPage();">طباعة</button>
+            <button id="" onclick="refresh();">تحديث</button>
+            <a href="../clientsInvoices/clients.html">الحسابات</a>
+
+ 
+        </aside>
+        <div class="alarm">
+            <h3 style="color: #fff; margin: 10px;">هل تريد الحذف</h3>
+            <div class="buttons">
+                <button id="btnCheckEdite" onclick="checkPass();">موافق</button>
+                <button id="btnCancel" onclick="exitePass();">الغاء</button>
+            </div>
+        </div>
+        <div class="content">
+           
+
+
+            <section class="inputsSuppliers">
+                <form class="addSuppliers" >
+                    <div class="priceOnly">
+                        <input  type="text" name="" value="" id="nameSuppliers" onkeyup="getNumInvoice();" placeholder="اسم العميل "  required>
+                        <input  type="text" name="" value="" id="idPersonalSuppliers" minlength="14" maxlength="14" placeholder="الرقم القومي"  required>
+                        <input  type="text" name="" value="" id="phoneSuppliers" maxlength="11" placeholder="رقم التليفون"  required>
+                        <input  type="text" name="" value="" id="adress"  placeholder="العنوان"  required>
+                    </div>
+                    
+                    <div class="priceOnly">
+                        <button type="button" class="createSuppliers">اضافة</button>
+                        
+                        <button type="reset" >الغاء</button>
+    
+                    </div>
+                </form>
+                
+                <form class="searchSuppliers" style="display: none;">
+                    <div class="priceOnly">
+                        <input  type="text" name="" value="" id="SearchSuppliers" onkeyup="searchSuppliers(this.value);" placeholder="ابحث"  required>
+                    </div>
+                    <div class="priceOnly">
+                        <button type="button" class="viewAddSuppliers">اضافة</button>
+                        <button type="button" class="printSuppliers">طباعة</button>
+                        <button type="reset" >الغاء</button>
+
+                    </div>
+                </form>
+                
+                <div class="cruds " >
+                    <div class="tableAllSuppliers">
+                        <table border="1" >
+                            <tr>
+                                <th colspan="13" class="headTable"> الموردين</th>
+                            </tr>
+                            <tr>
+                                <th>التاريخ</th>
+                                <th>اسم المستخدم</th>
+                                <th>اسم المورد</th>
+                                <th>الرقم القومي</th>
+                                <th>رقم الهاتف</th>
+                                <th>العنوان</th>
+                                <th>تعديل</th>
+                                <th>حذف</th>
+                            </tr>
+                            <tbody class="tbodySuppliers">
+                                
+                                
+                            </tbody>
+                        </table>
+                        
+                        
+                    </div>
+            
+                    <div class="detailsSuppliers">
+                        <button type="button" onclick="returnBack();">رجوع</button>
+
+                        <table border="1" >
+                            <tr>
+                                <th colspan="13" class="headTable"> تفاصيل الموردين</th>
+                            </tr>
+                            <tr>
+                                <th>التاريخ</th>
+                                <th>اسم المورد</th>
+                                <th>الصنف</th>
+                                <th>المبلغ</th>
+                                <th>المبلغ المدفوع</th>
+                                <th>المبلغ المتبقي</th>
+                                
+                            </tr>
+                            <tbody class="tbodyDetailsSuppliers">
+                                
+                                
+                            </tbody>
+                        </table>
+                        
+                        
+                    </div>
+                        
+                                            
+                </div>
+                
+                
+            </section>
+            
+        </div>
+        
+    </div>
+
+   
+    
+    
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اضافة مستخدمين جدد</title>
+    <link rel="stylesheet" href="css/userRegister-dist.css">
+</head>
+<body dir="rtl">
+    <header>
+        <a class="home" href="../home/home.html"><img src="../../img/huanfang.ico" alt="home"></a>
+        <h1>اضافة مستخدمين جدد</h1>
+        <a class="exit" href="../../index.html">خروج</a>
+    </header>
+    <div class="alarm">
+        <div class="inputs">
+            <div class="buttons">
+                <button id="btnCheckEdite" onclick="checkPass();">موافق</button>
+                <button id="btnCancel" onclick="exitePass();">الغاء</button>
+            </div>
+        </div>
+    </div>
+    <button id="btnOpenInputs" onclick="showInputs();">اضافة مستخدم جديد</button>
+    <div class="user">
+        <h2>يرجي تسجيل الدخول</h2>
+        <form action="" method="">
+            <div class="divUsername">
+                <label>اسم المستخدم</label>
+                <input type="text" value="" id="newUser"  placeholder="ادخل اسم المستخدم"/>
+            </div>
+            <div class="divPassword">
+                <label>كلمة المرور</label>
+                <input type="password" value="" id="newpassword" placeholder=" ادخل كلمة المرور"/>
+            </div>
+            <div class="divJob">
+                <label>اختر الوظيفة</label>
+                <select id="job">
+                    <option>مدير</option>
+                    <option>مدير مخزن</option>
+                    <option>it</option>
+                    <option>مشرف</option>
+                    <option>مدخل بيانات</option>
+                    <option>مسئول مشتريات</option> 
+                    <option>مسئول مبيعات</option>
+                </select>
+            </div>
+            <button class="register"><a href="">تسجيل حساب جديد</a></button>
+            
+        </form>
+        
+    </div>
+    <div class="cruds">
+        <table border="1">
+            <tr>
+                <th colspan="14" class="headTable">جميع المستخدمين</th>
+            </tr>
+            <tr>
+                <th>م</th>
+                <th>اسم المستخدم</th>
+                <th>الوظيفة</th>
+                <th>تعديل</th>
+                <th>حذف</th>
+            </tr>
+            <tbody class="tbodyUsers">
+                
+                
+            </tbody>
+        </table>
+        
+    </div>
+    
+
+    <script src="js/main-dist.js"></script>
+</body>
+</html>

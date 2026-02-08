@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عملاء الآجل</title>
+    <link rel="stylesheet" href="css/clients.css">
+</head>
+<body dir="rtl">
+    <header>
+        <a class="casher" href="../home/home.html">الرئيسية</a>
+        <h1>عملاء الآجل</h1>
+        <a class="purchases" href="../../index.html">خروج</a>
+    </header>
+    <div class="btns">
+        <a href="../customer/index.html">اضافة عميل جديد</a>
+        <button id="refresh" onclick="refresh();">تحديث</button>
+        <button id="btnSearch" onclick="viewSearch();">بحث</button>
+        <button id="btnPrint" onclick="PrintPage();">طباعة</button>
+        <button id="btnDetai" onclick="detailsClient();" style="display: none;">مبالغ مستحقة</button>
+        <button id="refresh" onclick="refresh();">رجوع</button>
+
+    </div>
+    
+
+    <div class="inputSearch">
+        <span class="spanSearch">اختر تاريخ البحث</span>
+        <input type="date" id="search" value="" onchange="searchDate(this.value);">
+        <select name="" id="selectClient" onchange="getNameClient(this.value);">    
+        </select>
+    </div>
+    
+    <div class="inputs">
+        
+        <form novalidate>
+            <div >
+                <input type="text" value="" placeholder="اسم العميل" name="" id="namInvoice" required>
+                <input type="text" value="" placeholder="باركود العميل" maxlength="5" name="" id="barcodePersonal" required>
+                <input type="text" value="" placeholder="رقم الفاتورة" name="" id="numInvoice" readonly required>
+                <input type="text" value="" placeholder=" اسم المسلم" name="" id="namePay" required>
+                <input type="text" value="" placeholder="المبلغ المدفوع" name="" id="paid" onkeyup="calcRemain(this.value);" required>
+                <input type="text" value="" placeholder="المبلغ المتبقي" name="" id="remain" readonly required>
+                <br>
+                <button  id="addNewInvoice">دفع نقدي</button>
+                <button onclick="refresh();">الغاء</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="allTables">
+        <div id="tbInvoice">
+            <div id="viewClient">
+                <table border="1">
+                    <tr>
+                        <th colspan="5" class="headTable">الفواتير</th>
+                    </tr>
+                    <tr>
+                        <th>م</th>
+                        <th>اسم العميل</th>
+                        <th>عرض الحساب</th>
+                        
+                    </tr>
+                    <tbody class="tbodyClients">
+                        
+                        
+                    </tbody>
+                </table>
+            </div>
+            <div id="details">
+                <table border="1" id="">
+                    <tr>
+                        <th colspan="13" class="headTable">الحساب</th>
+                    </tr>
+                    <tr>
+                        <th>م</th>
+                        <th class="datePaid">التاريخ</th>
+                        <th>الفاتورة</th>
+                        <th>العميل</th>
+                        <th class="stateDate">الصنف</th>
+                        <th class="pricePaid">حالة</th>
+                        <th class="">نوع البيع</th>
+                        <th>الكمية</th>
+                        <th>المبلغ</th>
+                        <th>اجمالي المبلغ</th>
+                        <th>المبلغ المدفوع</th>
+                        <th>المبلغ المتبقي</th>
+                        <th>دفع نقدي </th>
+                    </tr>
+                    <tbody class="tbodyDetails">
+                        
+                        
+                    </tbody>
+                </table>
+            </div>
+            
+            
+            
+        </div>
+        
+    </div>
+    <div class="invoicePrint">
+        <div>
+            <div class="headInvoice">
+                <h4 style="text-decoration: underline;">سوبر ماركت العبادي ارض الجنه</h4>
+                <div class="infoSales">
+                    
+                    
+    
+                </div>
+            </div>
+            <div class="tableInvoice">
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th colspan="6">فاتورة بيع</th>
+                        </tr>
+                        <tr>
+                            <th>م</th>
+                            <th>اسم العميل</th>
+                            <th>اسم الصنف</th>
+                            <th>الكمية</th>
+                            <th>السعر</th>
+                            <th>الاجمالي</th>
+                        </tr>
+                    </thead>
+                    <tbody class="tbodyPrint">
+                        
+                    </tbody>
+                    
+                </table>
+    
+            </div>
+            <div class="footerInvoice">
+                <h4>العنوان: جرجوس - سوق الخميس</h4>
+                <h4>إدارة اولاد المرحوم :علي العبادي - ابوادم : 01009774775 </h4>
+                <p>.............................................................................</p>
+                <h4>ملحوظة:ممنوع ارتجاع المجمدات والمخللات والآيس كريم</h4>
+                <p>............................................................................</p>
+                <h6>تصميم: م/عبدالمعز شيخون - هاتف: 01100865650</h6>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/clients.js"></script>
+</body>
+</html>

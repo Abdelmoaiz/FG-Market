@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المبيعات</title>
+    <link rel="stylesheet" href="css/sales.css">
+</head>
+<body dir="rtl">
+    <header>
+        <a class="casher" href="../home/home.html">الرئيسية</a>
+        <h1>المبيعات</h1>
+        <a class="purchases" href="../../index.html">خروج</a>
+    </header>
+    <button id="refresh" onclick="refresh();">تحديث</button>
+    <span class="spanSearch">اختر تاريخ البحث</span>
+    <input type="date" id="search" value="" onchange="searchInvoice(value);">
+    <input type="text" name="" id="searchInvoice" placeholder="ادخل رقم الفاتورة" onkeyup="showInvoice(this.value);">
+    
+
+
+    <div class="allTables">
+        <div id="tbInvoice">
+            <table border="1">
+                <tr>
+                    <th colspan="10" class="headTable">كل الفواتير</th>
+                </tr>
+                <tr>
+                    <!-- <th>م</th> -->
+                    <th>التاريخ</th>
+                    <th>رقم الفاتورة</th>
+                    <th>اسم الصنف</th>
+                    <th>نوع البيع</th>
+                    <th>العدد</th>
+                    <th>الاجمالي</th>
+                    <!-- <th>المكسب</th> -->
+                    <th>حالة البيع</th>
+                </tr>
+                <tbody class="tbody">
+                    
+                    
+                </tbody>
+            </table>
+        </div>
+        
+    </div>
+    
+    <script src="js/sales.js"></script>
+</body>
+</html>

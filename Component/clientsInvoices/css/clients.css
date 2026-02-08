@@ -1,0 +1,198 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fff;
+    color: rgb(26, 24, 24);
+}
+a{
+    text-decoration: none;
+}
+
+header{
+    width: 100%;
+    padding:5px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: rgb(20, 167, 196);
+    color: #fff;
+    
+
+}
+.casher,.purchases{
+    margin: 10px 0;
+    border-radius: 10px;
+    font-size: 18px;
+    color:#fff;
+    border: none;
+    outline: none;
+    padding: 10px 10px;
+    text-align: center;
+    background-color: rgba(73, 236, 241, 0.788);
+    cursor: pointer;
+
+}
+.casher:hover,.purchases:hover{
+    background-color: rgba(79, 202, 206, 0.788);
+
+}
+.casher:active,.purchases:active{
+    background-color: rgba(44, 138, 141, 0.788);
+
+}
+.inputs{
+    display: none;
+}
+#details{
+    display: none;
+}
+#search{
+    width: 200px;
+    height: 30px;
+    font-size: 20px;
+    text-align: center;
+
+}
+.spanSearch{
+    margin-right: 20px;
+    font-size: 20px;
+}
+input,select{
+    width: 24%;
+    /* height: 30px; */
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid rgb(8, 188, 220);;
+    outline: none;
+    font-size: 14px;
+    text-align: center;
+    
+}
+.btns a{
+    padding: 4px 10px;
+}
+button,.btns a{
+    width: 100px;
+    height: 30px;
+    border-radius: 4px;
+    border: none;
+    margin: 5px;
+    background-color: rgb(114, 207, 224);
+    color: #fff;
+    font-size: 20px;
+
+
+}
+button:hover,a:hover{
+    background-color: rgb(8, 188, 220);
+    color: #fff;
+}
+button:active,a:active{
+    background-color: rgb(48, 72, 76);
+    color: #fff;
+}
+.inputSearch{
+    display: none;
+}
+.allTables{
+    position: relative;
+    display: block;
+}
+#tbDetails{
+    width: 100%;
+    position: absolute;
+    top: 10px;
+    display: none;
+}
+#tbDetails button{
+    margin: 10px 50px;
+    width: 150px;
+    padding: 5px;
+    background-color: #0abdf3;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+#tbDetails button:hover{
+    background-color: #39a4c4;
+
+}
+#tbDetails button:active{
+    background-color: #0b5b73;
+
+}
+table{
+    width: 100%;
+    margin: 10px auto;
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid;
+    color: black;    
+    font-weight: bold;
+}
+
+table th{
+    font-size: 16px;
+    text-transform: capitalize;
+    border: 1px solid;
+    color: black;    
+    font-weight: bold;
+
+}
+table td{
+    border: 1px solid;
+    color: black;    
+    font-weight: bold;
+}
+table button{
+    width: 70%;
+    padding: 5px 5px;
+    border: none;
+    margin: 2px;
+    border-radius: 5px;
+    background-color: rgb(189, 183, 183);
+    color: black;
+    border: 1px solid;
+
+
+}
+table button:hover{
+    background-color: rgb(14, 150, 177);
+}
+table button:active{
+    background-color: rgb(41, 76, 83);
+}
+
+.invoicePrint{
+    display: none;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    margin: 10px auto;
+    border: 1px solid;
+}
+.invoicePrint th{
+    background-color: #fff;
+    border: 1px solid;
+    color: black;
+
+}
+.invoicePrint table{
+    text-align: center;
+    width: 100%;
+    border: 1px solid;
+    font-weight: bold;
+
+}
+.invoicePrint .infoSales{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: right;
+}

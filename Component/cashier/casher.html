@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الفواتير</title>
+    <link rel="stylesheet" href="css/casher.css">
+</head>
+<body dir="rtl">
+    <header>
+        <a class="purchases" href="../home/home.html">الرئيسية</a>
+        <h1>فاتورة جديدة</h1>
+        <a class="sales" href="../../index.html">خروج</a>
+        
+    </header>
+    <button id="btnRefrsh" onclick="refresh();">تحديث</button>
+
+    <div class="view">
+
+        <div class="products">
+            <div id="allProducts">
+                <label for="selectSales">اختر نوع البيع</label>
+                <select name="" id="selectSales" onchange="selectTypeSales(value);">
+                    <option value="قطاعي">قطاعي</option>
+                    <option value="جملة">جملة</option>
+                </select>
+            </div>
+            
+            
+            <div id="allProducts" >
+                <label for="selectSales">ادخل باركود الصنف</label>
+                <input type="search" name="" id="insertProdu" onkeyup="insertItem(value)" value="" placeholder="ادخل اسم المنتج">
+            </div>
+            
+            <div id="allProducts" class="spPro">
+                <label for="selectSales">اختر الصنف</label>
+                <select id="selectePro" onchange="selectProduct(this.value);">
+                </select>
+                <!-- <button onclick="selectProduct();">اختيار</button> -->
+            </div>
+            
+
+            
+        </div>
+        <div class="invoice" >
+            <form novalidate>
+                <div class="inputs">
+                    <div class="divAll">
+                        <div>
+                            <label for="numInvoice">رقم الفاتورة</label>
+                            <input type="text" value="" placeholder="رقم الفاتورة" name="" id="numInvoice" readonly required>
+                        </div>
+                        <div class="namInvoice" style="display: none;">
+                            <label for="namInvoice">اسم العميل</label>
+                            <input type="text" value="" placeholder="اسم العميل" name="" id="namInvoice" readonly style="display: none;">
+                        </div>
+                        <div>
+                            <label for="title">اسم صنف</label>
+                            <input type="text" value="" placeholder="اسم صنف" name="" id="title" readonly required>
+                        </div>
+                        <div>
+                            <label for="quantity">العدد /  الوزن</label>
+                            <input type="text" value="" placeholder="العدد" name="" onkeyup="calctotal(this.value);" id="quantity" required>
+                        </div>
+                        <div>
+                            <label for="price">السعر</label>
+                            <input type="text" value=""placeholder="السعر" name=""  id="price" onkeyup="calctotal();"  required>
+                        </div>
+                        <div>
+                            <label for="total">الاجمالي</label>
+                            <input type="text" value=""placeholder="الاجمالي" name="" onkeyup="calcCount(this.value);"  id="total"   required>
+                        </div>
+                    </div>
+                    <div>
+                        <button  id="addItems">اضافة للفاتورة</button>
+                        <button onclick="save();">حفظ الفاتورة</button>
+                        <button onclick="saveAndPrint();">حفظ و طباعة الفاتورة</button>
+                        <button onclick="refresh();">الغاء</button>
+                    </div>
+                    
+                </div>
+            </form>
+            
+           
+            <table border="1" id="tableNormal">
+                <tr>
+                    <th>م</th>
+                    <th>الصنف</th>
+                    <th>الكمية</th>
+                    <th>السعر</th>
+                    <th>الاجمالي</th>
+                </tr>
+                <tbody class="tbody">
+                    
+                </tbody>
+            </table>
+            
+        </div>
+       
+        
+    </div>
+    <div class="invoicePrint">
+        <div>
+            <div class="headInvoice">
+                <h4 style="text-decoration: underline;">سوبر ماركت العبادي ارض الجنه</h4>
+                <div class="infoSales">
+                    
+                    
+    
+                </div>
+            </div>
+            <div class="tableInvoice">
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th colspan="5">فاتورة بيع</th>
+                        </tr>
+                        <tr>
+                            <th>م</th>
+                            <th>اسم الصنف</th>
+                            <th>الكمية</th>
+                            <th>السعر</th>
+                            <th>الاجمالي</th>
+                        </tr>
+                    </thead>
+                    <tbody class="tbodyPrint">
+                        
+                    </tbody>
+                    
+                </table>
+    
+            </div>
+            <div class="footerInvoice">
+                <h4>العنوان: جرجوس - سوق الخميس</h4>
+                <h4>إدارة اولاد المرحوم :علي العبادي - ابوادم : 01009774775 </h4>
+                <p>.............................................................................</p>
+                <h4>ملحوظة:ممنوع ارتجاع المجمدات والمخللات والآيس كريم</h4>
+                <p>............................................................................</p>
+                <h6>تصميم: م/عبدالمعز شيخون - هاتف: 01100865650</h6>
+            </div>
+        </div>
+        
+    </div>
+    
+    
+    <script src="js/casher.js"></script>
+</body>
+</html>

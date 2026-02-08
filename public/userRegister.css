@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fff;
+    color: rgb(26, 24, 24);
+}
+a{
+    text-decoration: none;
+}
+
+header{
+    width: 100%;
+    padding:5px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: rgb(20, 167, 196);
+    color: #fff;
+    margin-bottom: 20px;
+
+}
+.exit,.home{
+    margin: 10px 0;
+    border-radius: 10px;
+    font-size: 18px;
+    color:#fff;
+    border: none;
+    outline: none;
+    padding: 10px 10px;
+    text-align: center;
+    background-color: rgba(73, 236, 241, 0.788);
+    cursor: pointer;
+
+}
+.exit:hover,.home:hover{
+    background-color: rgba(79, 202, 206, 0.788);
+
+}
+.exit:active,.home:active{
+    background-color: rgba(44, 138, 141, 0.788);
+
+}
+
+.user{
+  width: 50%;
+  padding: 50px 10px;
+  border-radius: 20px;
+  background-color: rgb(13, 182, 219);
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  margin: auto;
+  text-align: center;
+}
+.user .divUsername,.user .divPassword{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  margin-top: 10px auto;
+}
+
+.user label{
+  margin-top: 20px;
+  display: block;
+}
+.inputs{
+  width: 100%;
+  margin: 10px auto;
+}
+input,select{
+  width: 80%;
+  margin: 10px 10px;
+  padding: 10px;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+button{
+  padding: 10px;
+  border-radius: 4px;
+  border: none;
+  margin: 20px auto 20px;
+  background-color: rgb(24, 202, 241);
+
+
+}
+button:hover{
+  background-color: rgb(97, 196, 218);
+ 
+}
+button:active{
+  background-color: rgb(8, 155, 189);
+
+}
+button a{
+  width: 100%;
+  font-size: 22px;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 4px;
+  border: none;
+  color: #fff;
+
+}
+@media (max-width:767px) {
+  
+  .user{
+    width: 50%;
+  }
+  
+}

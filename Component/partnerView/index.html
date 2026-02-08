@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الحسابات</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body dir="rtl">
+    <div class="app">
+        <header>
+            <a class="home" href="../home/home.html"><img src="../../img/huanfang.ico" alt="home"></a>
+            <span class="userName"></span>
+            <h1>الشركاء</h1>
+            <span class="dateAndTime"></span>
+            <a class="exit" href="../../index.html"><img src="../../img/cancel.ico" alt="exit"></a>
+            
+        </header>
+        <aside>
+            <button type="button" class="viewSearchPartner">بحث</button>
+            <button type="button" onclick="printPage();">طباعة</button>
+            <button id="" onclick="refresh();">تحديث</button>
+            <select name="" style="display: none;" id="selectSupplaier" onchange="searchClient(this.value);">
+                <option value="">اختر المورد</option>
+            </select>
+ 
+        </aside>
+        <div class="alarm">
+            <h3 style="color: #fff; margin: 10px;">هل تريد الحذف</h3>
+            <div class="buttons">
+                <button id="btnCheckEdite" onclick="checkPass();">موافق</button>
+                <button id="btnCancel" onclick="exitePass();">الغاء</button>
+            </div>
+        </div>
+        <div class="content">
+           
+
+
+            <section class="inputsPartner">
+                <form class="addPartner" >
+                    <div class="priceOnly">
+                        <input  type="text" name="" value="" id="namePartner" onkeyup="getId();" placeholder="اسم الشريك "  required>
+                        <input  type="text" name="" value="" id="idPersonalPartner" minlength="14" maxlength="14" placeholder="الرقم القومي"  required>
+                        <input  type="text" name="" value="" id="phonePartner" maxlength="11" placeholder="رقم التليفون"  required>
+                        <input  type="text" name="" value="" id="adress"  placeholder="العنوان"  required>
+                    </div>
+                    <div class="priceOnly addPricePartner">
+                        <input  type="text" name="" value="" id="title" placeholder="البيان "  required>
+                        <input  type="text" style="display: none;" name="" value="" id="price" placeholder="المبلغ"  required>
+                        <input  type="text" name="" value="" id="paidPrice"  placeholder="الملبغ المسحوب"  required>
+                        <input  type="text" style="display: none;" name="" value="" id="remainPrice"  placeholder="المبلغ المتبقي"  required>
+                    </div>
+                    <div class="priceOnly">
+                        <button type="button" class="createPartner">اضافة</button>
+                        
+                        <button type="reset" onclick="refresh();" >الغاء</button>
+    
+                    </div>
+                </form>
+                
+                <form class="searchPartner" style="display: none;">
+                    <div class="priceOnly">
+                        <input  type="text" name="" value="" id="SearchPartner" onkeyup="searchPartner(this.value);" placeholder="ابحث"  required>
+                    </div>
+                    <div class="priceOnly">
+                        <button type="button" class="viewAddPartner">اضافة</button>
+                        <button type="reset" >الغاء</button>
+
+                    </div>
+                </form>
+                
+                <div class="cruds " >
+                    <div class="tableAllPartner">
+                        <table border="1" >
+                            <tr>
+                                <th colspan="13" class=""> الشركاء</th>
+                            </tr>
+                            <tr>
+                                <th>التاريخ</th>
+                                <th>اسم المستخدم</th>
+                                <th>اسم العميل</th>
+                                <th>رأس المال</th>
+                                <th>اجمالي المكسب</th>
+                                <th>اجمالي الرصيد</th>
+                                <th>المبلغ المسحوب</th>
+                                <th>الرصيد المتبقي</th>
+                                <th>سحب</th>
+                                <th>التفاصيل</th>
+                                
+                            </tr>
+                            <tbody class="tbodyPartner">
+                                
+                                
+                            </tbody>
+                        </table>
+                        
+                        
+                    </div>
+            
+                    <div class="detailsPartner">
+                        <button type="button" onclick="returnBack();">رجوع</button>
+
+                        <table border="1" >
+                            <tr>
+                                <th colspan="13" class="headTable"> تفاصيل الشركاء</th>
+                            </tr>
+                            <tr>
+                                <th>التاريخ</th>
+                                <th>اسم الشريك</th>
+                                <th>البيان</th>
+                                <th>المبلغ المدفوع</th>
+                                <th>المبلغ المسحوب</th>
+                                <th>المبلغ المتبقي</th>
+                                
+                            </tr>
+                            <tbody class="tbodyDetailsPartner">
+                                
+                                
+                            </tbody>
+                        </table>
+                        
+                        
+                    </div>
+                        
+                                            
+                </div>
+                
+                
+            </section>
+            
+        </div>
+        
+    </div>
+
+   
+    
+    
+    <script src="js/main.js"></script>
+</body>
+</html>

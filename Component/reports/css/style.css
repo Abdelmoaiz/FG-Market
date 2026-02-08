@@ -1,0 +1,249 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fff;
+    color: rgb(26, 24, 24);
+}
+a{
+    text-decoration: none;
+}
+
+header{
+    width: 100%;
+    padding:5px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: rgb(20, 167, 196);
+    color: #fff;
+    
+
+}
+.exit,.home{
+    margin: 5px 0;
+    border-radius: 10px;
+    font-size: 18px;
+    color:#fff;
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+    text-align: center;
+    cursor: pointer;
+
+}
+.casher:hover,.home:hover{
+    background-color: rgba(79, 202, 206, 0.788);
+
+}
+.casher:active,.home:active{
+    background-color: rgba(44, 138, 141, 0.788);
+
+}
+.userName,.dateAndTime{
+    font-size: 22px;
+    font-weight: bold;
+}
+.cancel{
+    display: none;
+}
+aside{
+    width: 15%;
+    float: right;
+    margin: 0;
+    padding: 10px;
+    /* background-color: rgb(218, 230, 241); */
+
+}
+/* .tableSalary,.tableImports{
+    display: none;
+} */
+.content{
+    width: 85%;
+    float: left;
+    margin: 0;
+    position: relative;
+}
+.cruds{
+    width: 100%;
+}
+/* .makeUp,.accessories,.search,.recieving,.inputsItems{
+    display: none;
+} */
+.inputs{
+    background-color: rgb(166, 201, 228);
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 10px 30px 10px;
+    /* display: none; */
+}
+
+input,button,.button,select,textarea{
+    width: 50%;
+    height: 40px;
+    margin: 5px auto;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 15px;
+    color:rgb(20, 20, 20);
+    border: 2px solid rgb(20, 167, 196);
+    outline: none;
+    padding: 5px 10px;
+    cursor: pointer;
+
+}
+
+aside button{
+    display: block;
+    width: 100%;
+    transition: .2s ease-in-out;
+    font-size: 16px;
+    font-weight: bold;
+    color:#fff ;
+}
+aside button:hover{
+    background-color: rgb(33, 161, 112);
+    transform: translate(-6px);
+}
+aside button:first-child{
+     background-color: rgb(33, 161, 112);
+   
+}
+input:focus{
+    transform: scaleX(1.04);
+    background-color: rgb(33, 161, 112);
+
+}
+#addItems{
+    width: auto;
+}
+button{
+    background-color: rgb(110, 219, 247);
+
+}
+
+button:hover{
+    transform: scaleX(1.04);
+    background-color: rgb(33, 161, 112);
+
+}
+button:active{
+    transform: scaleX(1.02);
+    background-color: rgb(4, 141, 88);
+
+}
+.priceOnly{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+}
+.priceOnly div{
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.priceOnly div label{
+    color: #fff;
+    text-align: center;
+    width: 30%;
+    font-size: 22px;
+
+}
+
+.output{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+}
+
+table{
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+    border: 2px solid;
+
+    /* display: grid; */
+    /* margin: auto; */
+}
+table button{
+    width: 90%;
+    color: #fff;
+}
+table .headTable{
+    /* background-color: rgb(20, 167, 196); */
+    color: #000;
+    font-size: 24px;
+    border: 2px solid;
+    font-weight: bold;
+}
+@media (max-width:767px) {
+    header{
+        padding:5px 5px;
+        text-align: center;
+        font-size: 10px;
+
+    }
+    header p{
+        display: none;
+    }
+    
+    #total,#gain-trading,#gain-normal,#quan-total{
+        font-size: 10px;
+        text-align: center;
+    }
+    table{
+        font-size: 10px;
+
+    }
+    table button{
+        font-size: 10px;
+        margin: 3px auto;
+        padding: 0 5px;
+
+    }
+
+}
+.invoice{
+    display: none;
+    padding: 50px 20px;
+    border: 2px solid;
+}
+.invoice .header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.invoice .header .engy{
+    font-size: 36px;
+    font-weight: 900;
+}
+.invoice .header .logo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    /* border: 1px solid red; */
+
+}
+.invoice .header .logo img{
+    width: 40%;
+}
+.invoice ol{
+    margin-right: 20px;
+}
+
+.invoice footer{
+    text-align: center;
+}
+.cancel:hover{
+    cursor: pointer;
+}

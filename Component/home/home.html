@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GS Market Home</title>
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body dir="rtl">
+    
+    <header>
+        <div class="links">
+            <div class="divAlarm">
+                <div class="alarm">
+                    <div class="inputs">
+                        <input type="password" id="passCheck" placeholder="ادخل الباسوورد من فضلك">
+                        <div class="buttons">
+                            <button id="btnCheck" onclick="checkPass();">موافق</button>
+                            <button id="btnCancel" onclick="exitePass();">الغاء</button>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+            <ul class="mainUl">
+                
+                <li><a class="btn-link-home">المشتريات</a>
+                    <ul>
+                        <li><a href="../purchases/purchases.html">شراء صنف جديد</a></li>
+                        
+                    </ul>
+                </li>
+                <li><a  class="btn-link-home">المبيعات</a>
+                    <ul>
+                        <li><a href="../cashier/casher.html" >فاتورة بيع جديدة</a></li>
+                        <li><a href="../cashierClientOld/casher.html" >فاتورة بيع اجل</a></li>
+                        <li><a href="../returnInvoice/returnInvoice.html" >ارتجاع فاتورة</a></li>
+                        <li><a href="../returnInvoiceClients/returnInvoice.html" >ارتجاع فاتورة آجل</a></li>
+
+                        <!-- <li><a href=""></a></li> -->
+                    </ul>
+                </li>
+                
+                <li><a  class="btn-link-home">الحسابات</a>
+                    <ul>
+                        <li><a href="../sales/sales.html"> حساب مبيعات الكاش</a></li>
+                        <li><a href="../clientsInvoices/clients.html">حساب مبيعات الآجل</a></li>
+                        <li><a href="../debtor-Customer/index.html">حسابات الموردين</a></li>
+                        <li><a  onclick="goToPage2('../partnerView/index.html');" >حسابات الشركاء</a></li>
+                        <li><a href="../expenses/expenses.html">المصروفات</a></li>
+                        <li><a href="../creditor-Customer/index.html">الحسابات الشخصية</a></li>
+                    </ul>
+                </li>
+                <li><a  class="btn-link-home">الإعدادات</a>
+                    <ul>
+                        <li><a onclick="goToPage('../userRegister/uerRegister.html');" >اضافة مستخدم</a></li>
+                        <li><a onclick="goToPage('../partnerForm/index.html');" >اضافة شريك</a></li>
+                    </ul>
+                </li>
+                <li><a  class="btn-link-home" href="../../index.html">خروج</a>
+                    
+                </li>
+            </ul>
+        </div>
+    </header>
+    
+   <div class="home">
+        <div class="container">
+            
+            <!-- <div class="app">
+                <div class="textHome">
+                    <h1 class="nameProg">GS Market</h1>
+                    <h2>سوبر ماركت الحسن للمواد الغذائية</h2>
+                </div>
+            </div> -->
+
+            <footer style="width:100%;bottom: 0;position: fixed; margin: auto;">
+                <marquee style="color: #000;text-align: center;" class="marq" direction="right">
+                        <h3 style="color: #000;text-align: center;">برمجة وتصميم : م/عبدالمعز شيخون (مهندس برامج ومواقع بمدارس المستقبل لغات بطيبة)  -  هاتف : 01100865650   -   العنوان : قنا قوص الجمالية بجوار البنزينة </h3>
+                </marquee>
+            </footer>
+        </div>
+
+        
+   </div> 
+   <script src="./js/home.js">
+        
+   </script>
+</body>
+</html>

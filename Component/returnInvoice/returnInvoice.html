@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ارتجاع الكاش</title>
+    <link rel="stylesheet" href="css/casher.css">
+</head>
+<body dir="rtl">
+    <header>
+        <a class="sales" href="../home/home.html">الرئيسية</a>
+        <h1>ارتجاع الكاش</h1>
+        <a class="purchases" href="../../index.html">خروج</a>
+
+    </header>
+
+    <div class="view">
+        <button id="refresh" onclick="refresh();">تحديث</button>
+
+        <div class="invoice">
+            <div class="inputs">
+                <input type="text" value="" placeholder="رقم الفاتورة" name="" onkeyup="addNumInvoice(this.value);" required id="numInoice">
+                <input type="text" value="" placeholder="اسم صنف" name="" id="title" readonly required>
+                <input type="text" value=""placeholder="السعر" name="" id="price" readonly required>
+                <input type="text" value="" placeholder="العدد" name="" id="quantity"  required>
+                <textarea name="" id="detailsReturn" placeholder="سبب الارتجاع" cols="30" rows="2" required></textarea>
+                
+                <button onclick="returnMe();">ارتجاع</button>
+                <button onclick="refresh();">الغاء</button>
+            </div>
+            <table border="">
+                <tr>
+                    <th>م</th>
+                    <th>الصنف</th>
+                    <th>نوع البيع</th>
+                    <th>الكمية</th>
+                    <th>السعر</th>
+                    <th>الاجمالي</th>
+                    <th>ارتجاع</th>
+
+                    
+
+                </tr>
+                <tbody class="tbody">
+                    
+                </tbody>
+            </table>
+        </div>
+        
+    </div>
+    
+    
+    <script src="js/returnInovice.js"></script>
+</body>
+</html>

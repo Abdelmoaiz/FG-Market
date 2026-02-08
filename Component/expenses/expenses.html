@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المصروفات</title>
+    <link rel="stylesheet" href="css/purchases.css">
+</head>
+<body dir="rtl">
+    <div class="app">
+        <header>
+            <a class="home" href="../home/home.html"><img src="../../img/huanfang.ico" alt="home"></a>
+            <span class="userName"></span>
+            <h1>المصروفات</h1>
+            <span class="dateAndTime"></span>
+            <a class="exit" href="../../index.html"><img src="../../img/cancel.ico" alt="exit"></a>
+        </header>
+        <aside>
+            <button id="exp" >مصروفات</button>
+            <button id="exp" onclick="refresh();">تحديث</button>
+            
+            <!-- <button id="" onclick="showInputs5();">رجوع</button> -->
+    
+        </aside>
+        <div class="content">
+            
+            <section class="inputsexpenses">
+                <form class="inputs">
+                    <div class="priceOnly">
+                        <input type="date" name="" value="" id="expensesDate" onchange="searchDate(this.value);" required>
+                        <input  type="text" name="" value="" id="expensesType" placeholder="نوع المصروف" required>
+                        <input  type="text" name="" value="" id="price" placeholder="المبلغ" required>
+                        <textarea name="" id="expensesDetails" cols="50" rows="2" placeholder="التفاصيل"></textarea>
+                    </div>
+                    <div class="priceOnly">
+                        <button type="submit" onclick="createExpenses();" id="create">اضافة  </button>
+                        <button type="reset" >الغاء</button>
+                    </div>
+                </form>
+                <div class="cruds">
+                    <table border="1">
+                        <tr>
+                            <th colspan="7" class="headTable">كل المصروفات</th>
+                        </tr>
+                        <tr>
+                            <th>م</th>
+                            <th>التاريخ</th>
+                            <th>نوع المصروف</th>
+                            <th>المبلغ</th>
+                            <th>التفاصيل</th>
+                            <th>تعديل</th>
+                            <th>حذف</th>
+                        </tr>
+                        <tbody class="tbodyExpenses">
+                            
+                            
+                        </tbody>
+                    </table>
+                    
+                </div>
+            </section>
+            
+            
+        </div>
+        
+    </div>
+    <div  class="tablePrint" onclick="exiteTable();">
+                
+        
+    </div>
+    
+    <script src="js/expenses.js"></script>
+</body>
+</html>

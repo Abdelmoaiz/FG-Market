@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fff;
+    color: rgb(26, 24, 24);
+}
+a{
+    text-decoration: none;
+}
+
+header{
+    width: 100%;
+    padding:5px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: rgb(20, 167, 196);
+    color: #fff;
+    
+
+}
+.casher,.purchases{
+    margin: 10px 0;
+    border-radius: 10px;
+    font-size: 18px;
+    color:#fff;
+    border: none;
+    outline: none;
+    padding: 10px 10px;
+    text-align: center;
+    background-color: rgba(73, 236, 241, 0.788);
+    cursor: pointer;
+
+}
+.casher:hover,.purchases:hover{
+    background-color: rgba(79, 202, 206, 0.788);
+
+}
+.casher:active,.purchases:active{
+    background-color: rgba(44, 138, 141, 0.788);
+
+}
+#search{
+    width: 200px;
+    height: 30px;
+    font-size: 20px;
+    text-align: center;
+
+}
+#searchInvoice{
+    padding: 5px;
+    text-align: center;
+    
+    border-radius: 2px;
+}
+.spanSearch{
+    margin-right: 20px;
+    font-size: 20px;
+}
+button{
+    width: 100px;
+    height: 30px;
+    border-radius: 4px;
+    border: none;
+    margin: 5px;
+    background-color: rgb(114, 207, 224);
+    color: #fff;
+    font-size: 20px;
+
+
+}
+.allTables{
+    position: relative;
+    display: block;
+}
+#tbDetails{
+    width: 100%;
+    position: absolute;
+    top: 10px;
+    display: none;
+}
+#tbDetails button{
+    margin: 10px 50px;
+    width: 150px;
+    padding: 5px;
+    background-color: #0abdf3;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+#tbDetails button:hover{
+    background-color: #39a4c4;
+
+}
+#tbDetails button:active{
+    background-color: #0b5b73;
+
+}
+table{
+    width: 98%;
+    margin: 10px auto;
+    text-align: center;
+    border: 3px solid rgba(79, 202, 206, 0.788);
+    
+}
+table th{
+    font-size: 16px;
+    text-transform: capitalize;
+    background-color: rgb(82, 212, 238);
+    color: #fff;
+    border: 2px solid #0abdf3;
+    
+
+}
+table td{
+    background-color: #fff;
+
+}
+table button{
+    width: 70%;
+    background-color: rgb(82, 212, 238);
+    padding: 5px 10px;
+    border: none;
+    margin: 5px;
+    border-radius: 5px;
+    color: #fff;
+
+}
+table button:hover{
+    background-color: rgb(14, 150, 177);
+}

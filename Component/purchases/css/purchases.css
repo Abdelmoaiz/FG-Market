@@ -1,0 +1,264 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fff;
+    color: rgb(26, 24, 24);
+    /* background: url(../../../img/1640858407175.jpg); */
+    background-size: cover;
+}
+a{
+    text-decoration: none;
+}
+
+header{
+    width: 100%;
+    padding:5px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: rgb(20, 167, 196);
+    color: #fff;
+    
+
+}
+
+.alarm,.alarmBarcode{
+    display: none;
+    width: 50%;
+    position: fixed;
+    z-index: 10;
+    top: 100px;
+    left: 25%;
+    margin: 50px auto;
+    padding: 20px;
+    /* display: flex; */
+    flex-direction: column;
+    border: 1px solid rgb(5, 132, 157);
+    background-color: rgb(16, 105, 122);
+    border-radius: 20px;
+    text-align: center;
+  
+  }
+  
+  .alarm input,.alarmBarcode input{
+    width: 80%;
+    margin: 20px auto;
+    cursor: pointer;
+  }
+  .alarm .buttons button,.alarmBarcode .buttons button{
+    width: 40%;
+    background-color: rgb(6, 153, 183);
+    color: #fff;
+    margin-left: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    
+  
+  }
+.casher,.sales{
+    margin: 10px 0;
+    border-radius: 10px;
+    font-size: 18px;
+    color:#fff;
+    border: none;
+    outline: none;
+    padding: 10px 10px;
+    text-align: center;
+    background-color: rgba(73, 236, 241, 0.788);
+    cursor: pointer;
+
+}
+.casher:hover,.sales:hover{
+    background-color: rgba(79, 202, 206, 0.788);
+
+}
+.casher:active,.sales:active{
+    background-color: rgba(44, 138, 141, 0.788);
+
+}
+.cruds{
+    padding: 20px 40px;
+    margin: 20px auto;
+}
+.buttons{
+    display: flex;
+    gap: 20px;
+}
+.buttons input{
+    text-align: center;
+
+}
+.inputs,.buttonForm{
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+.buttonForm{
+    display: flex;
+}
+.allInput{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.buttonForm button{
+    background-color: rgb(43, 102, 102);
+    color: #fff;
+}
+.buttonForm button:hover{
+    background-color: rgb(87, 184, 184);
+}
+.buttonForm button:active{
+    background-color: rgb(78, 105, 105);
+}
+
+input,button,.button{
+    width: 100%;
+    height: 40px;
+    margin: 5px auto;
+    border-radius: 10px;
+    font-size: 18px;
+    background-color: rgb(110, 219, 247);
+    color:rgb(20, 20, 20);
+    border: none;
+    outline: none;
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+
+}
+.viewBarcode{
+    width: 300px;
+    /* height: 200px; */
+    position: fixed;
+    border: 1px solid #000;
+    top: 100px;
+    left: 35%;
+    display: none;
+    flex-direction: column;
+    background-color: #fff;
+    
+}
+.btnBarcode{
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+#barcode{
+    /* display: none; */
+    width: 300px;
+    height: 200px;
+    border: 1px solid #fff;
+    position: relative;
+    margin: auto;
+    font-weight: bold;
+    
+
+}
+.viewBarcode .btn{
+    /* width: 60%; */
+    cursor: pointer;
+    border: 1px solid;
+}
+.allInputBarcode{
+    display: none;
+}
+.divQR{
+    width: 150px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 5px 0 10px;
+}
+.divQR img{
+    width: 100%;
+    height: 100%;
+}
+input:focus{
+    transform: scaleX(1.04);
+    background-color: rgb(33, 161, 112);
+
+}
+
+button{
+    background-color: rgb(110, 219, 247);
+
+}
+
+button:hover{
+    transform: scaleX(1.04);
+    background-color: rgb(33, 161, 112);
+
+}
+button:active{
+    transform: scaleX(1.02);
+    background-color: rgb(4, 141, 88);
+
+}
+.priceOnly{
+    display: flex;
+    justify-content: space-between;
+    
+    gap: 20px;
+
+}
+
+.output{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+}
+
+
+table{
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+}
+table button{
+    width: 100%;
+    margin: 5px auto;
+}
+table .headTable{
+    background-color: rgb(82, 212, 238);
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+}
+@media (max-width:767px) {
+    header{
+        padding:5px 5px;
+        text-align: center;
+        font-size: 10px;
+
+    }
+    header p{
+        display: none;
+    }
+    
+    #total,#gain-trading,#gain-normal,#quan-total{
+        font-size: 10px;
+        text-align: center;
+    }
+    table{
+        font-size: 10px;
+
+    }
+    table button{
+        font-size: 10px;
+        margin: 3px auto;
+        padding: 0 5px;
+
+    }
+
+}

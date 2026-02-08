@@ -1,0 +1,160 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fff;
+    color: rgb(26, 24, 24);
+}
+a{
+    text-decoration: none;
+}
+
+header{
+    width: 100%;
+    padding:5px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: rgb(20, 167, 196);
+    color: #fff;
+    
+
+}
+.exit,.home{
+    margin: 10px 0;
+    border-radius: 10px;
+    font-size: 18px;
+    color:#fff;
+    border: none;
+    outline: none;
+    padding: 10px 10px;
+    text-align: center;
+    background-color: rgba(73, 236, 241, 0.788);
+    cursor: pointer;
+
+}
+.casher:hover,.home:hover{
+    background-color: rgba(79, 202, 206, 0.788);
+
+}
+.casher:active,.home:active{
+    background-color: rgba(44, 138, 141, 0.788);
+
+}
+/* aside{
+    width: 22%;
+    float: right;
+    border: 1px solid;
+    padding: 20px 40px;
+    background-color: rgb(166, 201, 228);
+
+} */
+.content{
+    width: 100%;
+    float: left;
+}
+.inputs{
+    background-color: rgb(166, 201, 228);
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 10px 30px 10px;
+}
+
+input,button,.button,select{
+    width: 50%;
+    height: 40px;
+    margin: 5px auto;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 18px;
+    color:rgb(20, 20, 20);
+    border: 2px solid rgb(20, 167, 196);;
+    outline: none;
+    padding: 5px 10px;
+    cursor: pointer;
+
+}
+input:focus{
+    transform: scaleX(1.04);
+    background-color: rgb(33, 161, 112);
+
+}
+#addItems{
+    width: auto;
+}
+button{
+    background-color: rgb(110, 219, 247);
+
+}
+
+button:hover{
+    transform: scaleX(1.04);
+    background-color: rgb(33, 161, 112);
+
+}
+button:active{
+    transform: scaleX(1.02);
+    background-color: rgb(4, 141, 88);
+
+}
+.priceOnly{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+}
+
+.output{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+}
+
+table{
+    width: 100%;
+    /* margin-top: 20px; */
+    text-align: center;
+}
+table button{
+    width: 90%;
+    color: #fff;
+}
+table .headTable{
+    background-color: rgb(20, 167, 196);
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+}
+@media (max-width:767px) {
+    header{
+        padding:5px 5px;
+        text-align: center;
+        font-size: 10px;
+
+    }
+    header p{
+        display: none;
+    }
+    
+    #total,#gain-trading,#gain-normal,#quan-total{
+        font-size: 10px;
+        text-align: center;
+    }
+    table{
+        font-size: 10px;
+
+    }
+    table button{
+        font-size: 10px;
+        margin: 3px auto;
+        padding: 0 5px;
+
+    }
+
+}

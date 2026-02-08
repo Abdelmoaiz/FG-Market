@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المشتريات والمخازن</title>
+    <link rel="stylesheet" href="css/purchases.css">
+</head>
+<body dir="rtl">
+    <header>
+        <a class="casher" href="../home/home.html">الرئيسية</a>
+        <h1>المشتريات</h1>
+        <a class="sales" href="../../index.html">خروج</a>
+    </header>
+    <div class="alarm">
+        <h3 style="color: #fff; margin: 10px;">هل تريد الحذف</h3>
+        <div class="buttons">
+            <button id="btnCheckEdite" onclick="checkPass();">موافق</button>
+            <button id="btnCancel" onclick="refresh();">الغاء</button>
+        </div>
+    </div>
+    <div class="alarmBarcode">
+        <h3 style="color: #fff; margin: 10px;">هذا الباركود مسجل مسبقا هل تريد الاستمرار</h3>
+        <div class="buttons">
+            <button id="btnCheckEdite" onclick="containeOk();">موافق</button>
+            <button id="btnCancel" onclick="refresh();">الغاء</button>
+        </div>
+    </div>
+    <div class="viewBarcode">
+
+        <img id="barcode1" src="" alt="QR"/>
+        <img id="barcode2" src="" alt="QR"/>
+        <div class="btnBarcode">
+            <button class="btn" onclick="printBarcode();">طباعة الباركود</button>
+            <button class="btn" onclick="hideDive();">الغاء</button>
+        </div>
+        
+    </div>
+    <div class="cruds">
+        <div class="buttons">
+            <button class="btnOpenInputs" onclick="openInputs();">اضافة اصناف جديدة</button>
+            <input type="text" name="" id="search" onkeyup="searchItems(this.value);" placeholder="بحث">
+            <button class="btnOpenInputs" onclick="refresh();">تحديث</button>
+            
+        </div>
+        
+        
+        <div class="inputs">
+            <form action="">
+                <div class="allInput">
+                    <div>
+                        <label for="title">اسم صنف </label>
+                        <input type="text" name="" value="" id="title" onkeyup="getNumInvoice();" placeholder="اسم صنف ">
+                    </div>
+                    <div>
+                        <label for="barcodeTotal">باركود الجملة</label>
+                        <input type="text" name="" value="" id="barcodeTotal" placeholder="باركود الجملة" onkeyup="searchBarcodeTotal(value);" required minlength="5">
+                    </div>
+                    <div>
+                        <label for="barcodeOne">باركود قطاعي</label>
+                        <input type="text" name="" value="" id="barcodeOne" placeholder="باركود قطاعي" onkeyup="searchBarcodeOne(value);" required minlength="5">
+                    </div>
+                    
+                </div>
+                <div id="allInputBarcode" class="allInput allInputBarcode">
+                    <div class="divQR">
+                        <label for="qrTotal">QR جملة</label>
+                        <img id="imgQRTotal" src="" alt="QR"/>
+                    </div>
+                    <div class="divQR">
+                        <label for="qrOne">QR قطاعي</label>
+                        <img id="imgQROne" src="" alt="QR"/>
+                    </div>
+                    
+                    
+                </div>
+                <div class="allInput">
+                    <div>
+                        <label for="countTotal">عدد الجملة</label>
+                        <input type="text" name="" value="" id="countTotal" placeholder="عدد الجملة">
+                    </div>
+                    <div>
+                        <label for="countOne">عدد فردي/الوزن</label>
+                        <input type="text" name="" value="" id="countOne" placeholder="عدد فردي">
+                    </div>
+                    <div>
+                        <label for="totalCount">العدد الكلي</label>
+                        <input type="text" name="" value="" id="totalCount" placeholder="العدد الكلي" readonly>
+                    </div>
+                </div>
+                <div class="allInput">
+                    <div>
+                        <label for="price-buy">سعر الشراء</label>
+                        <input type="text" name="" value="" id="price-buy" onkeyup="getNumInvoice();" placeholder="سعر الشراء">
+                    </div>
+                    <div>
+                        <label for="price-saleTotal">سعر بيع الجملة</label>
+                        <input type="text" name="" value="" id="price-saleTotal" placeholder="سعر بيع الجملة">
+                    </div>
+                    <div>
+                        <label for="price-saleOne">سعر بيع القطاعي</label>
+                        <input type="text" name="" value="" id="price-saleOne" placeholder="سعر بيع القطاعي">
+                    </div>
+                    
+                </div>
+                <div class="allInput">
+                    <div>
+                        <label for="date-Mfg">تاريخ الانتاج</label>
+                        <input type="date" name="" value="" id="date-Mfg" placeholder="تاريخ الانتاج">
+                    </div>
+                    <div>
+                        <label for="date-Exp">تاريخ الصلاحية</label>
+                        <input type="date" name="" value="" id="date-Exp" placeholder="تاريخ الصلاحية">
+                    </div>
+                </div>
+                
+                <div class="buttonForm">
+                </div>
+            </form>
+            <button  id="create">اضافة صنف</button>
+            <button class="btnOpenInputs" onclick="refresh();">الغاء</button>
+
+            
+        </div>
+        
+        
+        <table border="1">
+            <tr>
+                <th colspan="13" class="headTable">كل الاصناف</th>
+            </tr>
+            <tr>
+                <th>م</th>
+                <th>باركود الجملة</th>
+                <th>باركود القطاعي</th>
+                <th>اسم الصنف </th>
+                <th>العدد الكلي/الوزن الكلي</th>
+                <th>سعر الشراء</th>
+                <th>سعر البيع جملة</th>
+                <th>سعر البيع قطاعي</th>
+                <th>تاريخ الصلاحية</th>
+                <th>تحديث</th>
+                <th>اضافة</th>
+                <th>حذف</th>
+            </tr>
+            <tbody class="tbody">
+                
+                
+            </tbody>
+        </table>
+    </div>
+    <script src="js/purchases.js"></script>
+</body>
+</html>
